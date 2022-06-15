@@ -8,13 +8,15 @@ import { TodoTask } from './todotask.interface';
 export class TaskComponent implements OnInit {
   @Input() task!: TodoTask;
   @Output() deleteTaskEvent = new EventEmitter<number>();
+  @Output() finishTaskEvent = new EventEmitter<number>();
 
   deleteTaskItem(id: number): void {
-    console.log(`emit {id}`);
     this.deleteTaskEvent.emit(id);
   }
 
-  finishTask(): void {}
+  finishTaskItem(id: number): void {
+    this.finishTaskEvent.emit(id);
+  }
 
   ngOnInit(): void {}
 }

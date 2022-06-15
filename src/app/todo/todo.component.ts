@@ -6,24 +6,27 @@ import { TodoTask } from './task/todotask.interface';
   styleUrls: ['./todo.component.scss'],
 })
 export class TodoComponent implements OnInit {
-  tasks: TodoTask[] = [
-    { title: 'test0', status: false, id: 0 },
-    { title: 'test1', status: false, id: 1 },
-    { title: 'test2', status: false, id: 2 },
-    { title: 'test3', status: false, id: 3 },
-    { title: 'test4', status: false, id: 4 },
-  ];
+  tasks: TodoTask[] = [];
   constructor() {}
 
-  addTask(title: string): void {
+  addTask(task: HTMLInputElement): void {
     this.tasks.push({
-      title: title,
+      title: task.value,
       status: false,
       id: this.tasks.length,
     });
+    task.value = '';
   }
   deleteTask(id: number) {
     this.tasks = this.tasks.filter((task) => task.id != id);
+  }
+  finishTask(id: number) {
+    let task = this.tasks.find((task) => task.id == id);
+    if (typeof task != 'undefined') {
+      task.status = true;
+    } else {
+      console.error(`Couldn't find task with id ${id}`);
+    }
   }
 
   ngOnInit(): void {}

@@ -1,8 +1,8 @@
 <div id="todo-wrapper">
   <div id="todo-input">
-    <input type="text" #taskTitle>
+    <input type="text" #taskTitle (keyup.enter)="addTask(taskTitle)">
     <div>
-      <button (click)="addTask(taskTitle.value)">Add</button>
+      <button mat-button (click)="addTask(taskTitle)">Add</button>
     </div>
   </div>
 
@@ -10,7 +10,7 @@
     <ul>
       <ng-template ngFor let-task [ngForOf]="tasks">
         <li>
-          <app-task [task]="task" (deleteTaskEvent)="deleteTask($event)"></app-task>
+          <app-task [task]="task" (deleteTaskEvent)="deleteTask($event)" (finishTaskEvent)="finishTask($event)" [ngStyle]="{'font-decoration': (task.status) ? 'line-through' : 'none'}"></app-task>
         </li>
       </ng-template>
     </ul>
