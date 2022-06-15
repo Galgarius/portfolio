@@ -1,0 +1,10 @@
+#todo-wrapper {
+  #todo-input {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+  }
+  ul {
+    list-style-type: none;
+  }
+}

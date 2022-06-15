@@ -1,0 +1,15 @@
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  button {
+    margin: 0 1rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+

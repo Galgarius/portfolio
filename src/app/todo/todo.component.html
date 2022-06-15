@@ -1,0 +1,18 @@
+<div id="todo-wrapper">
+  <div id="todo-input">
+    <input type="text" #taskTitle>
+    <div>
+      <button (click)="addTask(taskTitle.value)">Add</button>
+    </div>
+  </div>
+
+  <div id="todo-tasks">
+    <ul>
+      <ng-template ngFor let-task [ngForOf]="tasks">
+        <li>
+          <app-task [task]="task" (deleteTaskEvent)="deleteTask($event)"></app-task>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</div>
