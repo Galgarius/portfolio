@@ -17,9 +17,11 @@ export class TodoComponent implements OnInit {
     });
     task.value = '';
   }
+
   deleteTask(id: number) {
     this.tasks = this.tasks.filter((task) => task.id != id);
   }
+
   finishTask(id: number) {
     let task = this.tasks.find((task) => task.id == id);
     if (typeof task != 'undefined') {

@@ -1,5 +1,5 @@
 <div id="task">
-  <div id="content">{{task.title}}</div>
+  <div id="content" [ngClass]="task.status == true ? 'strikethrough' : 'null'">{{task.title}}</div>
   <div id="task-btns">
     <button mat-icon-button id="finishBtn" (click)="finishTaskItem(task.id)"><mat-icon>done</mat-icon></button>
     <button mat-icon-button id="deleteBtn" (click)="deleteTaskItem(task.id)"><mat-icon>close icon</mat-icon></button>

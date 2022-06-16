@@ -10,7 +10,7 @@
     <ul>
       <ng-template ngFor let-task [ngForOf]="tasks">
         <li>
-          <app-task [task]="task" (deleteTaskEvent)="deleteTask($event)" (finishTaskEvent)="finishTask($event)" [ngStyle]="{'font-decoration': (task.status) ? 'line-through' : 'none'}"></app-task>
+          <app-task [task]="task" (deleteTaskEvent)="deleteTask($event)" (finishTaskEvent)="finishTask($event)"></app-task>
         </li>
       </ng-template>
     </ul>
