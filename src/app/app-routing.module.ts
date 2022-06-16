@@ -8,7 +8,6 @@ import { TodoComponent } from './todo/todo.component';
 const routes: Routes = [
   { path: 'kalaha', component: KalahaComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'bindings', component: BindingsComponent },
   { path: 'todo', component: TodoComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];

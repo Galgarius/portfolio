@@ -1,0 +1,31 @@
+@import "../colors.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+* {
+  color: map-get($colors, innertext);
+}
+#wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#container {
+  width: 25rem;
+  text-align: justify;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15rem;
+  }
+}

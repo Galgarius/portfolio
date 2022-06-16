@@ -5,5 +5,12 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: map-get($colors, bg);
+  display: flex;
+  app-root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
+
 
