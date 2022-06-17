@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: map-get($colors, bg);
+  color: map-get($colors, innertext);
   display: flex;
   app-root {
     display: flex;
@@ -12,5 +13,4 @@ body {
     flex-grow: 1;
   }
 }
-
 

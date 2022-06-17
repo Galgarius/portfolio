@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { BindingsComponent } from './bindings/bindings.component';
 import { TodoComponent } from './todo/todo.component';
 import { TaskComponent } from './todo/task/task.component';
+import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { TaskComponent } from './todo/task/task.component';
     BindingsComponent,
     TodoComponent,
     TaskComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { TaskComponent } from './todo/task/task.component';
     MatSliderModule,
     MatIconModule,
     MatToolbarModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

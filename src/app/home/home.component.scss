@@ -5,9 +5,6 @@
   flex-direction: column;
   flex-grow: 1;
 }
-* {
-  color: map-get($colors, innertext);
-}
 #wrapper {
   height: 100%;
   width: 100%;
@@ -22,6 +19,13 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  a {
+
+    &:visited {
+      color: map-get($colors, visited);
+    }
+  }
+
   ul {
     display: flex;
     flex-direction: row;
